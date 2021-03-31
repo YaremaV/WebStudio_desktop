@@ -281,8 +281,12 @@ img {
   margin-bottom: 50px;
 }
 
-.buttons .item + .item {
+.buttons__item {
   margin-left: 8px;
+}
+
+.buttons__item:first-child {
+  margin-left: 0;
 }
 
 .btn {
@@ -303,15 +307,14 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio .list {
+.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,12 +323,12 @@ img {
   margin: -15px;
 }
 
-.list .items {
+.cards__items {
   margin: 15px;
   width: 370px;
 }
 
-.portfolio-link {
+.cards__link {
   display: block;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -333,26 +336,19 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.cards__link:hover, .cards__link:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
-.img-overlay {
+.cards__img-overlay {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.cards__overlay {
   position: absolute;
   height: 100%;
   left: 0;
@@ -371,6 +367,12 @@ img {
   padding: 63px 24px;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
+}
+
+.cards__link:hover .cards__overlay,
+.cards__link:focus .cards__overlay {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .cont-border {
