@@ -24,9 +24,7 @@
 }
 
 .footer-form__button {
-  display: flex;
-  text-align: center;
-  align-items: center;
+  @include centeredFlex($df: flex, $jc: center, $ai: center);
   padding: 10px 29px;
   margin-left: 12px;
   border-radius: 4px;

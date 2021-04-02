@@ -3,9 +3,7 @@
   padding-bottom: 94px;
 
   &__list {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     margin-right: -30px;
   }
 
@@ -25,9 +23,7 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     border: 1px solid #afb1b8;
     border-radius: 4px;
     width: 100%;

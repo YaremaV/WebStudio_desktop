@@ -59,9 +59,7 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     margin-top: 20px;
   }
 
@@ -74,9 +72,7 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -102,9 +98,7 @@
   padding: 0;
 
   &__thumb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     margin-left: 93px;
   }
 
@@ -131,8 +125,7 @@
   }
 
   &__icon {
-    text-align: center;
-    align-items: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     fill: var(--white-color);
     margin-left: 10px;
   }

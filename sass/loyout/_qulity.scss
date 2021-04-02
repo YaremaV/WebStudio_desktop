@@ -17,9 +17,7 @@
   }
 
   &__thumb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex($df: flex, $jc: center, $ai: center);
     width: 270px;
     height: 120px;
     margin-bottom: 30px;

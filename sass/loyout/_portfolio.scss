@@ -24,9 +24,7 @@
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex($df: flex, $jc: center, $ai: center);
   margin-bottom: 50px;
 
   &__item {
